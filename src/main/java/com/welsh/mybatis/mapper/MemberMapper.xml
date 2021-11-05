@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.welsh.mybatis.MemberMapper">
+
+	<insert id="insertMember" parameterType="MemberDto"> <!-- parameterType은 db로 부터 받아오는 값 형태 -->
+		INSERT INTO MEMBER	VALUES (SEQ_MEMBER.NEXTVAL,
+										#{userId},
+										#{userName},
+										#{userPwd},
+										#{userPhone},
+										#{birthDay},
+										#{userAddress},
+										#{userZipcode},
+										#{emailCheck},
+										#{userNickname},
+										#{PICheck1},
+										#{PICheck2},
+										#{PICheck3},
+										#{PICheck4},
+										SYSDATE,
+										#{isKakaoLogin}
+										)
+	</insert>
+	
+	<insert id="insertKakaoMember" parameterType="MemberDto"> <!-- parameterType은 db로 부터 받아오는 값 형태 -->
+		INSERT INTO MEMBER (no,userid,username,userinsertdate,iskakaologin)	VALUES (SEQ_MEMBER.NEXTVAL,
+										#{userId},
+										#{userName},
+										
+										SYSDATE,
+										#{isKakaoLogin}
+										)
+	</insert>
+	<select id="isExistId" resultType="Integer" parameterType="MemberDto">
+		SELECT COUNT(*) FROM MEMBER WHERE USERID=#{userId}
+	</select>
+	<select id="showAllMember" resultType="MemberDto">
+		SELECT * FROM MEMBER ORDER BY NO DESC
+	</select>
+
+	
+	<select id="getLoggedMember" parameterType="MemberDto"
+		resultType="MemberDto">
+		SELECT * FROM MEMBER WHERE USERID = #{userId} AND ISKAKAOLOGIN ='false'
+	</select>
+	
+	<select id="getKakaoLoggedMember" parameterType="MemberDto"
+		resultType="MemberDto">
+		SELECT * FROM MEMBER WHERE USERID = #{userId} 
+	</select>
+
+	<select id="getSelectAccount" parameterType="MemberDto" resultType="MemberDto">
+		SELECT * FROM MEMBER WHERE USERID = #{userId}
+	</select>
+	
+	<!-- 
+			<select id="getSelectOne" parameterType="Integer" resultType="MemberDto">
+				SELECT * FROM MEMBER WHERE NO = #{no}
+			</select>
+	 -->
+	
+	<delete id="deleteMember" parameterType="MemberDto">	<!-- parameterType은 db로 부터 받아오는 값 형태 -->
+		DELETE FROM MEMBER WHERE USERID = #{userId} AND USERPWD = #{userPwd}
+	</delete>
+	
+	<!-- 비밀번호 맞는지 확인하고 삭제  -->
+	<select id="getPassword" parameterType="String" resultType="String">
+		SELECT USERPWD FROM MEMBER WHERE USERID = #{userId}
+	</select>
+	
+	
+	<update id="memberModify" parameterType="MemberDto">
+		UPDATE MEMBER SET USERNAME = #{userName}, USERZIPCODE = #{userZipcode}, birthDay = #{birthDay}, userPhone = #{userPhone}, userAddress = #{userAddress}, userPwd = #{userPwd} WHERE userId = #{userId}
+	</update>
+	
+	<select id="idCheck" parameterType="String" resultType="Integer"> 
+		SELECT COUNT(*) AS COUNT FROM MEMBER WHERE ID = #{id}
+	</select>
+	
+	<insert id="insertDelivery" parameterType="MemberDto">
+		INSERT INTO DELIVERYADDRESS VALUES(SEQ_DELIVERYADDRESS.NEXTVAL,
+											#{reciverName},
+											#{userId},
+											#{reciverPhone},
+											#{deliveryAddress},
+											#{deliveryZipcode},
+											#{familyCard}
+											)
+	</insert>
+	
+</mapper>
+
+
+
+
+
+
+
+

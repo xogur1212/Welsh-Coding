@@ -1,0 +1,150 @@
+@charset "utf-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+#wrap {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.left {
+  background-color: #0058a3;
+  width: 40%;
+  max-width: 100%;
+  height: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // position: relative;
+}
+header {
+  display: flex;
+  gap: 100px;
+  i {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .logo {
+    max-width: 88px;
+    img {
+      width: 100%;
+    }
+  }
+}
+#content {
+  line-height: 100%;
+  // position: absolute;
+  // top: 50%;
+  // padding-left: 120px;
+  h1 {
+    color: #fbd914;
+  }
+  p {
+    color: #fff;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  .login-txt1 {
+    margin: 30px 0;
+  }
+}
+footer {
+  font-size: 12px;
+  color: #fff;
+  // padding-left: 120px;
+  a {
+    color: #fff;
+  }
+  p {
+    margin-top: 6px;
+  }
+}
+.right {
+  width: 60%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 80px;
+  box-sizing: border-box;
+  .login-id {
+    #email {
+      width: 450px;
+      border: none;
+      border-bottom: 1px solid #333;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 3px 0;
+    }
+    p {
+      font-size: 14px;
+      margin-top: 10px;
+      a {
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  }
+  .login-pw {
+    margin: 50px 0;
+    #password {
+      width: 450px;
+      border: none;
+      border-bottom: 1px solid #333;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 0;
+    }
+    .pw-search {
+      font-size: 14px;
+      margin-top: 10px;
+      font-weight: bold;
+      a {
+        color: #333;
+      }
+    }
+  }
+  .login-btn {
+    text-decoration: none;
+    background-color: #0058a3;
+    width: 450px;
+    height: 50px;
+    border-radius: 50px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+  h4 {
+    margin-top: 70px;
+    font-size: 14px;
+  }
+  .join-btn {
+    text-decoration: none;
+    background-color: #f5f5f5;
+    width: 450px;
+    height: 50px;
+    border-radius: 50px;
+    color: #333;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+}

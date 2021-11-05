@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.welsh.mybatis.MemberMapper">
+	<insert id="insertProduct" parameterType="ProductDto">
+		INSERT INTO PRODUCT
+		VALUES (SEQ_PRODUCT.NEXTVAL,
+		#{productNumber},
+		#{categoryCode},
+		#{productName},
+		#{productPrice},
+		#{productStock},
+		SYSDATE,
+		#{productHits},
+		#{productDesc},
+		#{productInfo},
+		#{isRecommend}
+
+		)
+	</insert>
+
+	<update id="updateIsRecommend">
+		UPDATE PRODUCT SET ISRECOMMEND =#{isRecommend} WHERE productNumber=#{productNumber}
+	</update>
+	
+	<select id="getProduct" resultMap="Product" parameterType="ProductDto">
+		select p.no ,p.productnumber ,p.categorycode,p.productname,
+		p.productprice,p.productstock, p.productinsertdate,p.producthits,
+		p.productdesc ,p.productInfo,p.isRecommend,pl.productimg,pl.fileNumber
+		from product p 
+		left join productimagelist pl 
+		on p.productnumber =pl.productnumber
+		WHERE p.CATEGORYCODE =#{categoryCode}
+		order by pl.filenumber asc
+		 
+	</select>
+
+	
+	<update id="updateProductImage" parameterType="ProductImageListDto">
+	
+		UPDATE PRODUCTIMAGELIST SET PRODUCTREALIMG =#{productRealImg}, PRODUCTIMG=#{productImg} 
+		WHERE FILENUMBER =#{fileNumber} AND PRODUCTNUMBER =#{productNumber}
+	</update>
+
+	<insert id="insertProductImage"
+		parameterType="ProductImageListDto">
+		INSERT INTO PRODUCTIMAGELIST
+		VALUES
+		(SEQ_PRODUCTIMAGELIST.NEXTVAL,
+		#{fileNumber},
+		#{productNumber},
+		#{categoryCode},
+		#{productImg},
+		#{productRealImg},
+		#{imageType},
+		SYSDATE
+		)
+	</insert>
+	
+	<update id="productIncreaseShowCount" parameterType="ProductDto">
+		UPDATE PRODUCT SET PRODUCTHITS =PRODUCTHITS+1 WHERE PRODUCTNUMBER =#{productNumber}
+	</update>
+	
+	<update id="productDecreaseStock" parameterType="String">
+		UPDATE PRODUCT SET PRODUCTSTOCK =PRODUCTSTOCK-1 WHERE PRODUCTNUMBER =#{productNumber}
+	</update>
+	
+	<insert id="insertReply" parameterType="ProductReplyDto">
+		INSERT INTO PRODUCTREPLY VALUES(SEQ_PRODUCTREPLY.NEXTVAL,
+		#{replyNumber},#{productNumber},
+		#{userNickname},SYSDATE,
+		#{reGroup},#{reStep},#{reLevel},#{contents})
+	</insert>
+	
+	<select id="getAllReply" parameterType="String" resultType="ProductReplyDto">
+		SELECT * FROM PRODUCTREPLY WHERE PRODUCTNUMBER =#{productNumber}
+	</select>
+	
+	
+	<delete id="deleteReply" parameterType="ProductReplyDto">
+		DELETE FROM PRODUCTREPLY WHERE REPLYNUMBER=#{replyNumber} AND PRODUCTNUMBER =#{productNumber}
+	</delete>
+	
+	<delete id ="deleteProduct" parameterType="ProductDto">
+		delete from product where productNumber=#{productNumber}
+	</delete>
+	
+	<delete id ="deleteProductImage" parameterType="ProductImageListDto">
+		DELETE FROM PRODUCTIMAGELIST 
+		WHERE FILENUMBER =#{fileNumber} AND PRODUCTNUMBER =#{productNumber}
+	</delete>
+
+	<select id ="getLastFileNumber" resultType ="Integer">
+		select nvl(max(filenumber),0) from productimagelist
+	</select>
+	
+	<select id ="getLastReplyNumber" resultType ="Integer">
+		select nvl(max(replynumber),0) from productreply
+	</select>
+	<select id ="getProductOne" resultMap="Product" parameterType="ProductDto">
+	
+		select p.no ,p.productnumber ,p.categorycode,p.productname,
+		p.productprice,p.productstock, p.productinsertdate,p.producthits,
+		p.productdesc ,p.productInfo,p.isRecommend,pl.productimg,pl.fileNumber
+		from product p 
+		left join productimagelist pl 
+		on p.productnumber =pl.productnumber
+		where p.productNumber= #{productNumber}
+		order by pl.filenumber asc
+	
+	</select>
+
+
+	<select id ="getSearchProductList" resultMap="Product" parameterType="SearchDto">
+	
+		select p.no ,p.productnumber ,p.categorycode,p.productname,
+		p.productprice,p.productstock, p.productinsertdate,p.producthits,
+		p.productdesc ,p.productInfo,p.isRecommend,pl.productimg,pl.fileNumber
+		from product p 
+		left join productimagelist pl 
+		on p.productnumber =pl.productnumber
+		WHERE p.productname LIKE '%' || #{searchWord} || '%' 
+		order by pl.filenumber asc
+	
+	</select>
+	
+
+	<select id="selectCartProduct" resultMap="Product" >
+		select p.no ,p.productnumber ,p.categorycode,p.productname,
+		p.productprice,p.productstock, p.productinsertdate,p.producthits,
+		p.productdesc ,p.productInfo,p.isRecommend ,pl.productimg,pl.fileNumber
+		from product p 
+		left join productimagelist pl 
+		on p.productnumber =pl.productnumber
+		 where p.productNumber in 
+		<foreach collection="list" item="type"  open="(" close=")" separator=",">
+            #{type}
+        </foreach>
+        order by pl.filenumber asc
+
+	</select>
+
+	
+
+	<select id="getAllProduct" resultMap="Product">
+		select p.no ,p.productnumber ,p.categorycode,p.productname,
+		p.productprice,p.productstock, p.productinsertdate,p.producthits,
+		p.productdesc ,p.productInfo,p.isRecommend,pl.productimg,pl.fileNumber
+		from product p 
+		left join productimagelist pl 
+		on p.productnumber =pl.productnumber 
+		order by pl.filenumber asc
+	</select>
+	
+	
+	
+	<select id="getAllRecommendProduct" resultMap="Product" parameterType="ProductDto" >
+		select p.no ,p.productnumber ,p.categorycode,p.productname,
+		p.productprice,p.productstock, p.productinsertdate,p.producthits,
+		p.productdesc ,p.productInfo,p.isRecommend,pl.productimg,pl.fileNumber
+		from product p 
+		left join productimagelist pl 
+		on p.productnumber =pl.productnumber 
+		where p.isRecommend= #{isRecommend}
+		order by pl.filenumber asc
+	</select>
+	
+	
+	
+	<resultMap id="Product" type="ProductDto">
+		<result property ="no" column="no"/>
+		<result property ="productNumber" column="productNumber"/>
+		<result property ="categoryCode" column="categoryCode"/>
+		<result property ="productName" column="productName"/>
+		<result property ="productPrice" column="productPrice"/>
+		<result property ="productStock" column="productStock"/>
+		<result property ="productDesc" column="productDesc"/>
+		<result property ="productInsertDate" column="productInsertDate" />
+		<result property ="productHits" column="productHits"/>
+		<result property ="productInfo" column="productInfo"/>
+		<result property ="isRecommend" column="isRecommend"/>
+		<collection property="productImageList" 
+			ofType="ProductImageListDto" >
+		<result property ="productImg" column="productImg"/>
+		<result property ="fileNumber" column="fileNumber"/>		
+			
+		</collection>
+			
+	</resultMap>
+	
+	
+
+</mapper>
+
+
+
+
+
+

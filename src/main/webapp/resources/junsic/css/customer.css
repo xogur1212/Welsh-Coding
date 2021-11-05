@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+body {
+  min-width: 1440px;
+}
+
+body #wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+body #wrap #content {
+  padding: 50px;
+}
+
+body #wrap #content #customer h1 {
+  font-size: 30px;
+  padding-bottom: 40px;
+  font-weight: bold;
+}
+
+body #wrap #content #customer h4 {
+  color: #444;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.6;
+  padding-bottom: 20px;
+}
+
+body #wrap #content #customer p {
+  font-size: 14px;
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+
+body #wrap #content #customer ul {
+  display: flex;
+}
+
+body #wrap #content #customer ul li a {
+  font-size: 14px;
+  text-decoration: underline;
+  padding: 0 10px;
+}
+
+body #wrap #content #customer ul li::after {
+  content: "|";
+  float: right;
+  display: block;
+}
+
+body #wrap #content #customer ul li:last-child::after {
+  display: none;
+}
+
+body #wrap #content section {
+  padding: 40px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+body #wrap #content section h2 {
+  padding-bottom: 30px;
+  font-size: 25px;
+}
+
+body #wrap #content #delivery-search .delivery-container {
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+
+body #wrap #content #delivery-search .delivery-container h3 {
+  font-size: 22px;
+  padding-bottom: 20px;
+}
+
+body #wrap #content #delivery-search .delivery-container p {
+  padding-bottom: 15px;
+  font-size: 14px;
+}
+
+body #wrap #content #delivery-search .delivery-container a {
+  display: block;
+  width: 160px;
+  height: 40px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 15px;
+}
+
+body #wrap #content #chat-qna h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  padding-bottom: 20px;
+}
+
+body #wrap #content #chat-qna p {
+  font-size: 14px;
+  line-height: 1.6;
+  padding-bottom: 30px;
+}
+
+body #wrap #content #chat-qna a {
+  display: block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+body #wrap #content #email-qna p {
+  font-size: 14px;
+  padding-bottom: 15px;
+  line-height: 1.6;
+}
+
+body #wrap #content #email-qna form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+body #wrap #content #email-qna form label {
+  display: flex;
+  gap: 20px;
+}
+
+body #wrap #content #email-qna form label input {
+  border: none;
+  border-bottom: 1px solid #333;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+body #wrap #content #email-qna form label i {
+  width: 30px;
+  padding: 10px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+body #wrap #content #email-qna form label button {
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  color: #0058ad;
+  border: 1.5px solid #0058ad;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 25px;
+}
+
+body #wrap #content #email-qna form label textarea {
+  padding: 7px;
+}
+
+body #wrap #content #email-qna form .submit {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  margin-top: 30px;
+  padding: 20px;
+  box-shadow: 0 -4px 10px -4px #ccc;
+}
+
+body #wrap #content #email-qna form .submit .submit-agree {
+  display: flex;
+  width: 300px;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+body #wrap #content #email-qna form .submit .submit-agree .chk {
+  width: 15px;
+  height: 15px;
+  margin-top: 7.5px;
+}
+
+body #wrap #content #email-qna form .submit .submit-agree p {
+  font-size: 12px;
+  line-height: 30px;
+}
+
+body #wrap #content #email-qna form .submit .submit-agree p a {
+  color: #0058ad;
+}
+
+body #wrap #content #email-qna form .submit .submit-btn {
+  border: none;
+  background-color: #0058ad;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+body #wrap #content #call-qna h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #444;
+  padding-bottom: 20px;
+}
+
+body #wrap #content #call-qna p {
+  padding-bottom: 15px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+body #wrap #content #call-qna p a {
+  text-decoration: underline;
+}

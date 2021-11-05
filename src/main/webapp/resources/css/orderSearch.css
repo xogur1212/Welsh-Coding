@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+body {
+  margin-top: 152px;
+}
+
+body #wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+body #wrap #content {
+  max-width: 1440px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+body #wrap #content .state {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 5px 1px #ccc;
+  border-radius: 5px;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+body #wrap #content .state .waiting {
+  width: 80px;
+  height: 70px;
+  padding: 12.5px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body #wrap #content .state .waiting h3 {
+  font-size: 18px;
+  color: #555;
+}
+
+body #wrap #content .state .waiting h4 {
+  color: #0058ad;
+}
+
+body #wrap #content .state i {
+  line-height: 70px;
+  font-size: 30px;
+  color: #0058ad;
+}
+
+body #wrap #content .product-wrap {
+  box-shadow: 1px 1px 5px 1px #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+body #wrap #content .product-wrap .order-number {
+  margin-bottom: 20px;
+  font-size: 14px;
+  padding: 10px;
+  line-height: 1.6;
+  border-bottom: 1px solid #ccc;
+}
+
+body #wrap #content .product-wrap .product-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+body #wrap #content .product-wrap .product-container .product-left {
+  display: flex;
+  width: 60%;
+}
+
+body #wrap #content .product-wrap .product-container .product-left .product-img {
+  width: 150px;
+}
+
+body #wrap #content .product-wrap .product-container .product-left .product-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+body #wrap #content .product-wrap .product-container .product-left .product-txt {
+  width: 60%;
+  padding: 30px;
+}
+
+body #wrap #content .product-wrap .product-container .product-left .product-txt p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+body #wrap #content .product-wrap .product-container .product-center {
+  width: 20%;
+  padding: 30px 0;
+}
+
+body #wrap #content .product-wrap .product-container .product-center h4,
+body #wrap #content .product-wrap .product-container .product-center p,
+body #wrap #content .product-wrap .product-container .product-center h5 {
+  height: 30px;
+  line-height: 30px;
+}
+
+body #wrap #content .product-wrap .product-container .product-center p {
+  font-size: 14px;
+}
+
+body #wrap #content .product-wrap .product-container .product-center h5 {
+  color: #0058ad;
+  font-size: 14px;
+}
+
+body #wrap #content .product-wrap .product-container .product-right {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+body #wrap #content .product-wrap .product-container .product-right .trace-btn,
+body #wrap #content .product-wrap .product-container .product-right .confirm-btn {
+  width: 120px;
+  height: 40px;
+  border: none;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+body #wrap #content .product-wrap .product-container .product-right .trace-btn {
+  background-color: #0058ad;
+  color: #fff;
+}
+
+body #wrap #content .product-wrap .product-container .product-right .confirm-btn {
+  margin-top: 10px;
+  color: #0058ad;
+  background-color: #fff;
+  border: 1.5px solid #0058ad;
+}

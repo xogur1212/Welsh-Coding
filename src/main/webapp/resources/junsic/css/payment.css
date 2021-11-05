@@ -1,0 +1,515 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+body {
+  min-width: 1440px;
+}
+
+body #wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+body #wrap header {
+  max-width: 1440px;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0;
+  margin: 0 auto;
+}
+
+body #wrap header a h1 {
+  width: 110px;
+}
+
+body #wrap header a h1 img {
+  width: 100%;
+  margin: 0;
+}
+
+body #wrap #content {
+  max-width: 1440px;
+  display: flex;
+  padding: 50px;
+  margin: 0 auto;
+  gap: 80px;
+}
+
+body #wrap #content .payment-left {
+  width: 65%;
+}
+
+body #wrap #content .payment-left .delivery {
+  display: flex;
+  width: 100%;
+}
+
+body #wrap #content .payment-left .delivery .number {
+  width: 10%;
+}
+
+body #wrap #content .payment-left .delivery .number p {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt {
+  width: 90%;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt h2 {
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info {
+  border: 2px solid #0058ad;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info .delivery-option {
+  background-color: #f5f5f5;
+  padding: 20px;
+  font-size: 14px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info .delivery-option h4 {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info .delivery-option form label {
+  display: flex;
+  height: 20px;
+  gap: 15px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info .delivery-option form label .check-box {
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-info .delivery-option form label .check-box p {
+  height: 30px;
+  line-height: 30px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .address-chk {
+  display: flex;
+  flex-direction: row;
+  line-height: 30px;
+  height: 30px;
+  gap: 10px;
+  padding: 10px 30px 0;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .address-chk input {
+  height: 30px;
+  margin-left: 30px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .address-chk input:first-child {
+  margin-left: 0;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .address-chk p {
+  font-size: 16px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form h2 {
+  border-top: 1px solid #ccc;
+  margin-top: 50px;
+  padding: 30px 0;
+  font-size: 25px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form label {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form label p {
+  font-size: 12px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form label input {
+  border: none;
+  border-bottom: 1px solid #333;
+  height: 40px;
+  font-size: 16px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form label h3 {
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .default {
+  padding: 30px 30px 0;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .default p {
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .default button {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
+  background-color: #0058ad;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .default select {
+  height: 30px;
+  margin-top: 10px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .default .txt-length {
+  text-align: right;
+  padding-top: 5px;
+  font-size: 12px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .agree {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  gap: 15px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .agree .check-box {
+  width: 20px;
+  height: 20px;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .agree p {
+  width: 90%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .agree p span {
+  text-decoration: underline;
+}
+
+body #wrap #content .payment-left .delivery .delivery-txt .delivery-form .next {
+  background-color: #0058ad;
+  border: none;
+  margin: 20px 30px 60px;
+  width: 90%;
+  height: 60px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+body #wrap #content .payment-left .pay {
+  border-top: 1px solid #ccc;
+  display: flex;
+  padding-top: 50px;
+}
+
+body #wrap #content .payment-left .pay .number {
+  width: 10%;
+}
+
+body #wrap #content .payment-left .pay .number p {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+body #wrap #content .payment-left .pay .payment {
+  width: 90%;
+}
+
+body #wrap #content .payment-left .pay .payment h2 {
+  font-size: 25px;
+  padding-bottom: 30px;
+}
+
+body #wrap #content .payment-left .pay .payment .total {
+  display: flex;
+  width: 100%;
+}
+
+body #wrap #content .payment-left .pay .payment .total .total-txt {
+  width: 70%;
+}
+
+body #wrap #content .payment-left .pay .payment .total .total-txt h3 {
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+
+body #wrap #content .payment-left .pay .payment .total .total-txt p {
+  font-size: 14px;
+  color: #333;
+}
+
+body #wrap #content .payment-left .pay .payment .total .total-price {
+  width: 30%;
+  text-align: right;
+  font-size: 22px;
+}
+
+body #wrap #content .payment-right {
+  width: 35%;
+}
+
+body #wrap #content .payment-right .order-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+body #wrap #content .payment-right .order-info h4 {
+  font-size: 14px;
+}
+
+body #wrap #content .payment-right .order-info a {
+  text-decoration: underline;
+  font-size: 14px;
+  color: #333;
+}
+
+body #wrap #content .payment-right .imgbox {
+  display: flex;
+  width: 100%;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+body #wrap #content .payment-right .imgbox img {
+  width: 30%;
+  height: 100%;
+  border: 1px solid #333;
+}
+
+body #wrap #content .payment-right .order-list {
+  font-size: 14px;
+  margin: 30px 0;
+}
+
+body #wrap #content .payment-right .order-list-container {
+  display: flex;
+  font-size: 12px;
+  color: #111;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #111;
+}
+
+body #wrap #content .payment-right .order-list-container .order-list1 p,
+body #wrap #content .payment-right .order-list-container .order-list2 p {
+  margin-bottom: 10px;
+}
+
+body #wrap #content .payment-right .order-list-container .order-list2 {
+  text-align: right;
+}
+
+body #wrap #content .payment-right .order-price {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px 0;
+  height: 30px;
+}
+
+body #wrap #content .payment-right .order-price h4 {
+  font-size: 14px;
+  line-height: 30px;
+}
+
+body #wrap #content .payment-right .order-price h3 {
+  font-size: 20px;
+}
+
+body #wrap #content .payment-right form label {
+  display: flex;
+  height: 20px;
+  gap: 15px;
+}
+
+body #wrap #content .payment-right form label .check-box {
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+}
+
+body #wrap #content .payment-right form label .check-box p {
+  height: 30px;
+  line-height: 30px;
+}
+
+body #wrap #content .payment-right .order-btn {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: #0058ad;
+  border: none;
+  display: block;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+body footer {
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+body footer > .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+body .footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+body .footer-txt h3 {
+  font-size: 18px;
+  text-align: left;
+}
+
+body .footer-txt p {
+  font-size: 12px;
+  text-align: left;
+  margin: 15px 0;
+}
+
+body footer .inner button {
+  float: left;
+  font-size: 12px;
+  border-radius: 50px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+}
+
+body footer .inner button:hover {
+  background-color: #555;
+}
+
+body .footer-list {
+  width: 20%;
+  box-sizing: border-box;
+}
+
+body .footer-lister li {
+  font-size: 14px;
+  text-align: left;
+  margin: 10px;
+}
+
+body .footer-lister li:nth-of-type(1) {
+  font-weight: 700;
+}
+
+body .footer-middle {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+body .main-sns-warp {
+  display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  gap: 10px;
+}
+
+body .main-sns-warp img {
+  width: 30px;
+  padding-top: 50px;
+}
+
+body .footer-btm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+}
+
+body .footer-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+body .footer-contents li {
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+body .footer-contents li a {
+  color: #333;
+}
+
+body .footer-indent {
+  font-size: 12px;
+  margin: 50px 0;
+  text-align: left;
+  color: #333;
+}

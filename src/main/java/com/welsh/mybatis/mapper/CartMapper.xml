@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.welsh.mybatis.CartMapper">
+
+	<insert id ="insertCart" parameterType="CartDto">
+		INSERT INTO CART VALUES(SEQ_CART.NEXTVAL,
+		#{cartNumber},
+		#{productNumber},
+		#{cartValue},
+		#{productPrice},
+		#{productCount})
+	</insert>
+	
+	<select id="findproductNumber" parameterType="CartDto" resultType="String">
+		select productNumber from cart where cartvalue=#{cartValue}
+	</select>  
+	
+	<select id="findProductInfo" parameterType="CartDto" resultType="CartDto">
+		select productNumber,productCount,productPrice from cart where cartvalue=#{cartValue}
+	</select>
+	
+	
+	<delete id="deleteCartInfo" parameterType="CartDto">
+		delete from cart where cartvalue=#{cartValue}
+	</delete>
+</mapper>

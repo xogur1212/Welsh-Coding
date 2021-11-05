@@ -1,0 +1,122 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+body {
+  margin-top: 202px;
+  min-width: 1440px;
+}
+
+body #wrap {
+  width: 100%;
+  height: 100vh;
+}
+.puoduth1{
+    margin: 10px 0 40px 200px;
+    font-size: 35px;
+    text-align: left;
+}
+
+.produtcontent .produtcontents .produth2{
+    text-align: left;
+    font-size: 24px;
+    margin: 0 0 10px 200px;
+}
+.produtcontent .produtcontents .produttext{
+        display:-webkit-box;display:-ms-flexbox;
+        display:flex;-webkit-box-orient:horizontal;
+        -webkit-box-direction:normal;-ms-flex-flow:row;
+        flex-flow:row;width:100%
+}
+        
+.produtcontent .produtcontents .produttext .produtp{
+    width:35%;
+    font-size:14px;
+    margin-left: 200px;
+    text-align: left;
+    line-height: 1.6;
+}
+.produtcontent .produtcontents .produttext .produtbt{
+    width:15%;
+    border-radius:50px;
+    margin-left:525px;
+    background-color:#fff;
+    height:40px;
+    margin-top:20px;
+    margin-bottom: 50px;
+    border:none;
+    border:1px solid #ccc;
+    font-weight:700;
+    font-size:12px
+}
+
+.produtcontent .produtcontents .produttext .produtbt:hover{
+    border:1px solid #484848;cursor:pointer
+}
+.produtimg{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:row wrap;
+    flex-flow:row wrap;
+    margin-bottom:130px;
+}
+.imgbox{width: 750px; height: 965px}
+#imgbox{margin-left: 190px;}
+#imgbox2{margin-left: 190px;}
+.produtimg img{width:97%; height: 100%;}
+.produtcontent2 .produtcontents2 .produth32{
+    text-align: left;
+    font-size: 24px;
+    margin: 130px 0 10px 200px;
+}
+.produtp2{
+    width:35%;
+    font-size:14px;
+    margin-left: 200px;
+    text-align: left;
+    line-height: 1.6;
+}
+.produtcontent2 .produtcontents2 .produttext2{
+    display:-webkit-box;display:-ms-flexbox;display:flex;
+    -webkit-box-orient:horizontal;-webkit-box-direction:normal;
+    -ms-flex-flow:row;flex-flow:row;width:100%
+}
+.produtcontent2 .produtcontents2 .produttext2 .produtbt2{
+    width:15%;
+    border-radius:50px;
+    margin-left:525px;
+    background-color:#fff;
+    height:40px;
+    margin-top:20px;
+    margin-bottom: 50px;
+    border:none;
+    border:1px solid #ccc;
+    font-weight:700;
+    font-size:12px
+}
+.produtcontent2 .produtcontents2 .produttext2 .produtbt2:hover{
+    border:1px solid #484848;cursor:pointer
+}

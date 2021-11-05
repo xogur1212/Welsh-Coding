@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.welsh.mybatis.OrderMapper">
+
+	<insert id ="insertOrder" parameterType="CustomerOrderDto">
+		INSERT INTO CUSTOMERORDER VALUES(SEQ_CUSTOMERORDER.NEXTVAL,
+		#{orderNumber},
+		#{userId},
+		SYSDATE,
+		
+		#{deliveryZipcode},
+		#{deliveryAddress},
+		#{reciverName},
+		#{reciverPhone})
+	</insert>
+	
+		<insert id ="insertOrderDetail" parameterType="java.util.List">
+		INSERT ALL
+			<foreach collection="list" item="item" index="index" close="SELECT * FROM DUAL" separator=" ">
+				INTO CUSTOMERORDERDETAIL VALUES (
+				SEQ_CUSTOMERORDERDETAIL.NEXTVAL+#{index},#{item.orderNumber},#{item.productNumber}
+				,#{item.userId},#{item.productCount},#{item.productPrice},
+				#{item.orderDetailStatus},#{item.refundCheck}
+				)
+			</foreach>
+			
+	</insert>
+
+	<select id ="getAllOrder" resultType="CustomerOrderDto" parameterType="HashMap">
+		select * from (select B.*,rownum as num from customerorder B)
+		WHERE NUM  <![CDATA[>=]]>  #{start} AND NUM  <![CDATA[<]]>  #{end}
+	</select>
+	
+	<select id="getSearchTotal" 
+	parameterType="HashMap" resultType="Integer">
+		SELECT COUNT(*) AS TOTAL FROM 
+		CUSTOMERORDER WHERE ${searchSelect} 
+		LIKE '%' || #{searchWord} || '%' 
+	</select>
+	<select id="getTotal" resultType="int">
+		SELECT count(*) FROM CUSTOMERORDER
+	</select>
+	
+	
+	<select id="getAllOrderList" parameterType="String" 
+	resultMap="Order">
+	select  c.no, c.ordernumber, c.userid, c.orderdate  ,cd.productnumber,p.productName, p.productInfo,p.productPrice,pl.productImg  from customerorder c 
+	left join customerorderdetail cd on c.ordernumber=cd.ordernumber 
+	left join product p on cd.productnumber = p.productnumber 
+	left join productimagelist pl on p.productnumber =pl.productnumber 
+		where c.userid=#{userId}
+	</select>
+	
+	
+	<select id="getAllChart"  
+	resultMap="Order">
+	select  c.no, c.ordernumber, c.userid, c.orderdate  ,cd.productnumber,p.productName, p.productInfo,p.productPrice,pl.productImg  from customerorder c 
+	left join customerorderdetail cd on c.ordernumber=cd.ordernumber 
+	left join product p on cd.productnumber = p.productnumber 
+	left join productimagelist pl on p.productnumber =pl.productnumber 
+		
+	</select>
+	
+	
+	<resultMap id="Order" type="CustomerOrderDto">
+		<result property ="no" column="no"/>
+		<result property ="orderNumber" column="orderNumber"/>
+		<result property ="userId" column="userId"/>
+		<result property ="orderDate" column="orderDate"/>
+		
+		<collection property="productOrderDetailList" 
+			ofType="CustomerOrderDetailDto" >
+		<result property ="productNumber" column="productNumber"/>	
+			
+			<collection property="productList" 
+			ofType="productDto" >
+			<result property ="productName" column="productName"/>
+			<result property ="productInfo" column="productInfo"/>
+			<result property ="productPrice" column="productPrice"/>
+			
+			
+				<collection property="productImageList" 
+				ofType="ProductImageListDto" >
+				<result property ="productImg" column="productImg"/>
+				
+				</collection>
+			
+			</collection>
+			
+		</collection>
+		
+		
+			
+	</resultMap>
+	
+	
+	<select id="getSearchAllList" parameterType="SearchDto" 
+	resultType="CustomerOrderDto">
+		SELECT * FROM 
+					(SELECT B.*,ROWNUM AS NUM FROM CUSTOMERORDER B
+					WHERE ${searchSelect} LIKE 
+					'%' || #{searchWord} || '%' 
+					  )
+				WHERE NUM  <![CDATA[>=]]>  
+				#{start} AND NUM <![CDATA[<]]> #{end}
+	</select>
+	
+	<select id="getOrderDetailList" parameterType="CustomerOrderDetailDto" resultType="CustomerOrderDetailDto">
+		SELECT * FROM CUSTOMERORDERDETAIL 
+		WHERE ORDERNUMBER = #{orderNumber}
+	</select>
+	
+	
+</mapper>

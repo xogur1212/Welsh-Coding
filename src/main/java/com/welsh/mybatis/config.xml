@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		 	
+		<typeAlias type="com.welsh.model.MemberDto" alias="MemberDto" />
+		<typeAlias type="com.welsh.model.ProductDto" alias="ProductDto" />
+		<typeAlias type="com.welsh.model.ProductCategoryDto" alias="ProductCategoryDto" />
+		<typeAlias type="com.welsh.model.ProductImageListDto" alias="ProductImageListDto" />
+		<typeAlias type="com.welsh.model.ProductReplyDto" alias="ProductReplyDto" />
+		<typeAlias type="com.welsh.model.CartDto" alias="CartDto"/>
+		<typeAlias type="com.welsh.model.CustomerOrderDto" alias="CustomerOrderDto"/>
+		<typeAlias type="com.welsh.model.SearchDto" alias="SearchDto"/>
+		<typeAlias type="com.welsh.model.CustomerOrderDetailDto" alias="CustomerOrderDetailDto"/>
+		
+
+		<!--  
+		<typeAlias type="com.jjang051.model.board.ReplyDto" alias="ReplyDto" />
+		<typeAlias type="com.jjang051.model.board.SearchDto" alias="SearchDto" />
+		-->
+	</typeAliases>
+	
+	
+</configuration>

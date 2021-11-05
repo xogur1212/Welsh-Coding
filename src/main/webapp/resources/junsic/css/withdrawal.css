@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 1440px;
+}
+
+body #wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+body #wrap #content {
+  padding: 80px;
+  box-sizing: border-box;
+}
+
+body #wrap #content h1 {
+  font-size: 30px;
+  padding-bottom: 50px;
+}
+
+body #wrap #content .cancel-txt {
+  padding-bottom: 20px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+body #wrap #content .qna {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  padding: 30px 0 5px;
+}
+
+body #wrap #content a {
+  color: #333;
+  font-size: 14px;
+}
+
+body #wrap #content .password {
+  padding: 30px 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+}
+
+body #wrap #content .pw-txt {
+  font-size: 14px;
+}
+
+body #wrap #content form label {
+  display: flex;
+  flex-direction: column;
+}
+
+body #wrap #content form label .click {
+  font-size: 12px;
+  margin: 30px 0 8px;
+}
+
+body #wrap #content form label input {
+  border: none;
+  border-bottom: 1px solid #111;
+  font-size: 16px;
+  padding: 0;
+  height: 30px;
+  width: 300px;
+  margin-bottom: 8px;
+}
+
+body #wrap #content form label .hide {
+  font-size: 12px;
+  color: #e00751;
+}
+
+body #wrap #content form label .cancel-btn {
+  width: 300px;
+  height: 50px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 30px;
+}

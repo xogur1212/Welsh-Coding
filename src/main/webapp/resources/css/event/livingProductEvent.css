@@ -1,0 +1,272 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+body {
+  margin-top: 202px;
+  min-width: 1440px;
+}
+
+body #wrap {
+  width: 100%;
+  height: 100vh;
+}
+
+.livingcontents .livingh1 { 
+    margin: 10px 0 25px 200px;
+    font-size: 35px;
+    text-align: left;
+}
+
+.livingcontents .livingp1 {
+    margin: 0 0 10px 200px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.livingcontents img {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 80%;
+}
+
+.living-list01 {
+    margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.living-list01 .living-event {
+    width: 40%;
+    margin-top: 10px;
+}
+
+.living-list01 .living-event .livingh2 {
+    margin-top: -10px;
+    margin-left: -100px;
+    text-align: left;
+}
+
+.living-list01 .living-event .livingp2 {
+    margin-top: 10px;
+    width: 70%;
+    font-size: 14px;
+    margin-left: -100px;
+    text-align: left;
+}
+
+.living-list01 .living-event .livingbt {
+    margin-top: 50px;
+    margin-left: -750px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.living-list01 .living-event .livingbt:hover {
+    border: 1px solid #484848;
+    cursor: pointer;
+}
+
+.living-list01 img {
+    margin-left: 196px;
+    width: 40%;
+}
+
+.living-list02 {
+    margin-top: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.living-list02 .living-event02 {
+    width: 47%;
+    margin-top: 10px;
+}
+
+.living-list02 .livingh3 {
+    margin-top: -10px;
+    margin-left: 196px;
+    text-align: left;
+}
+
+.living-list02 .livingp3 {
+    margin-top: 10px;
+    margin-left: 196px;
+    width: 480px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.living-list02 .livingbt02 {
+    margin-top: 50px;
+    margin-left: -296px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.living-list02 .livingbt02:hover {
+    border: 1px solid #484848;
+    cursor: pointer;
+}
+
+.living-list02 img {
+    width: 40%;
+    margin-right: 179px;
+}
+
+.living-list05 {
+    margin-top: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.living-list05 .living-event05 {
+    width: 43%;
+    margin-top: 10px;
+}
+
+.living-list05 .living-event05 .livingh5 {
+    margin-top: -10px;
+    margin-left: -43px;
+    text-align: left;
+}
+
+.living-list05 .living-event05 .livingp5 {
+    margin-top: 10px;
+    width: 70%;
+    font-size: 14px;
+    margin-left: -43px;
+    text-align: left;
+}
+
+.living-list05 .living-event05 .livingbt05 {
+    margin-top: 50px;
+    margin-left: -700px;
+    border: none;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.living-list05 .living-event05 .livingbt05:hover {
+    border: 1px solid #484848;
+    cursor: pointer;
+}
+
+.living-list05 img {
+    margin-left: 196px;
+    width: 40%;
+}
+
+.living-list04 {
+    margin-bottom: 50px;
+    margin-top: 130px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.living-list04 .living-event04 {
+    width: 48%;
+    margin-top: 10px;
+}
+
+.living-list04 .livingh4 {
+    margin-top: 10px;
+    margin-left: 196px;
+    text-align: left;
+}
+
+.living-list04 .livingp4 {
+    margin-top: 10px;
+    margin-left: 196px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.living-list04 .livingbt04 {
+    margin-top: 50px;
+    margin-left: -318px;
+    border: none;
+    border:1px solid  #ccc;
+    border-radius: 50px;
+    height: 40px;
+    width: 200px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.living-list04 .livingbt04:hover {
+    border: 1px solid #484848;
+    cursor: pointer
+}
+
+.living-list04 img {
+    width: 40%;
+    margin-right: 179px;
+}
