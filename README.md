@@ -16,5 +16,5 @@ html css js jquery spring mybatis 를 이용한 쇼핑몰
 
 4. aws로 dns 설정까지하여 배포 하였었음 (요금 문제로 인해 내림)
 
-5. db와 web 서버를 따로 두고 진행
+5. db 서버 와 web 서버를 따로 두고 진행
 
